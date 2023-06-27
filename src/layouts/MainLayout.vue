@@ -5,184 +5,25 @@
     <div id="undefined-sticky-wrapper" class="sticky-wrapper" style="height: 56px;"><header class="default-header" style="">
       <nav class="navbar navbar-expand-lg  navbar-light">
         <div class="container">
-          <a class="navbar-brand" href="index.html">
+          <router-link class="navbar-brand" to="/">
             <img src="~@/assets/img/logo.png" alt="">
-          </a>
+          </router-link>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="text-white lnr lnr-menu"></span>
           </button>
 
           <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent">
             <ul class="navbar-nav">
-              <li><a href="./Pages-inside/blog.html">Blogs</a></li>
-              <li><a href="#portfolio">Places</a></li>
-              <li><a href="#service">Services</a></li>
-              <li><a href="./Pages-inside/About.html">About Us</a></li>
+              <li><router-link active-class="active" to="blog" exact>Blog</router-link></li>
+              <li><router-link active-class="active" to="/" exact>Places</router-link></li>
+              <li><router-link active-class="active" to="about" exact>About Us</router-link></li>
+              <li><router-link active-class="active" to="/" exact>Contact</router-link></li>
             </ul>
           </div>
         </div>
       </nav>
     </header></div>
-    <!-- End Header Area -->
-    <!-- start banner Area -->
-    <section class="banner-area relative" id="home">
-      <div class="overlay overlay-bg"></div>
-      <div class="container">
-        <div class="row fullscreen d-flex align-items-center justify-content-center" style="height: 975px;">
-          <div class="banner-content col-lg-10">
-            <h5 class="text-uppercase">Be the part of this Wonderful Journey</h5>
-            <h1>
-              Incredible India!
-            </h1>
-            <a href="#" class="primary-btn text-uppercase">Explore Now</a>
-          </div>
-        </div>
-      </div>
-    </section>
-    <!-- End banner Area -->
-
-    <!-- Start portfolio-area Area -->
-
-    <!-- End portfolio-area Area -->
-
-
-    <!-- Start service Area -->
-<!--    <section class="service-area section-gap relative" id="service">-->
-<!--      <div class="overlay overlay-bg"></div>-->
-<!--      <div class="container">-->
-<!--        <div class="row d-flex justify-content-center">-->
-<!--          <div class="menu-content pb-60 col-lg-10">-->
-<!--            <div class="title text-center">-->
-<!--              <h1 class="mb-10 text-white">Always in our customer Favour</h1>-->
-<!--              <p>Who are always with tight Budget</p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; End service Area &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Start services Area &ndash;&gt;-->
-<!--    <section class="services-area pb-100">-->
-<!--      <div class="container">-->
-<!--        <div class="row">-->
-<!--          <div class="col-lg-4">-->
-<!--            <div class="single-service">-->
-<!--              <img class="img-fluid" src="img/s1.png" alt="">-->
-<!--              <h4>Ammenties Selection</h4>-->
-<!--              <p>-->
-<!--                It's totaly on you what you want and what you want to let it go on Hotel Selection process.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-4">-->
-<!--            <div class="single-service">-->
-<!--              <img class="img-fluid" src="img/s2.png" alt="">-->
-<!--              <h4>Visa Ready</h4>-->
-<!--              <p>-->
-<!--                Just 32 Hours - What it takes get your Visa Ready and other documentation necessary for travel.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-4">-->
-<!--            <div class="single-service">-->
-<!--              <img class="img-fluid" src="img/s3.png" alt="">-->
-<!--              <h4>Personalized Travel Plans</h4>-->
-<!--              <p>-->
-<!--                We have wide Varieties of Hotel &amp; Resorts to accomodate you. 3D4N or 15D16N totally upto you.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-<!--    &lt;!&ndash; End services Area &ndash;&gt;-->
-
-<!--    &lt;!&ndash; Start review Area &ndash;&gt;-->
-<!--    <section class="review-area section-gap" id="testimonial">-->
-<!--      <div class="container">-->
-<!--        <div class="row d-flex justify-content-center">-->
-<!--          <div class="menu-content pb-60 col-lg-10">-->
-<!--            <div class="title text-center">-->
-<!--              <h1 class="mb-10">How Our Customers felt for Us</h1>-->
-<!--              <p>Who are in extreme love with friendly &amp; inviting people</p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--        <div class="row">-->
-<!--          <div class="col-lg-6">-->
-<!--            <div class="single-review">-->
-<!--              <img src="img/c1.png" alt="">-->
-<!--              <div class="title d-flex flex-row">-->
-<!--                <a href="#"><h4>Fannie Rowe</h4></a>-->
-<!--                <div class="star">-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <p>-->
-<!--                It was a life Experience to visit such a beautiful cultural country.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--            <div class="single-review">-->
-<!--              <img src="img/c3.png" alt="">-->
-<!--              <div class="title d-flex flex-row">-->
-<!--                <a href="#"><h4>Lillie Summers</h4></a>-->
-<!--                <div class="star">-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <p>-->
-<!--                Just one Word - Incredible!-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--          <div class="col-lg-6">-->
-<!--            <div class="single-review">-->
-<!--              <img src="img/c2.png" alt="">-->
-<!--              <div class="title d-flex flex-row">-->
-<!--                <a href="#"><h4>Bob Marley</h4></a>-->
-<!--                <div class="star">-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-starchecked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <p>-->
-<!--                Damm! I'm thinking of staying here in this World.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--            <div class="single-review">-->
-<!--              <img src="img/c4.png" alt="">-->
-<!--              <div class="title d-flex flex-row">-->
-<!--                <a href="#"><h4>Jackie Chan</h4></a>-->
-<!--                <div class="star">-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                  <span class="fa fa-star checked"></span>-->
-<!--                </div>-->
-<!--              </div>-->
-<!--              <p>-->
-<!--                Now, I am big fan of Power Yoga. Thanks for such a gift to this world.-->
-<!--              </p>-->
-<!--            </div>-->
-<!--          </div>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </section>-->
-    <!-- End review Area -->
-
+  
 
     <slot name="content"/>
 
@@ -194,10 +35,10 @@
             <div class="single-footer-widget">
               <h6>About Us</h6>
               <p>
-                We Provide Tour Plans for your most comfortable travel ever. Let yourself dive into the Beauty, Culture &amp; festivals of India. Have You're Good time at India.
+                We Provide Tour Plans for your most comfortable travel ever. Let yourself dive into the Beauty, Culture &amp; festivals of India. Have You're Good time exploring Montenegro.
               </p>
               <p class="footer-text">
-                Copyright ©2023 All rights reserved | This Website is created with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://github.com/mrjatinchauhan" target="_blank">Jatin Chauhan</a>
+                Copyright ©2023 All rights reserved | This Website is created with <i class="fa fa-heart-o" aria-hidden="true"></i> by FMN org.</a>
               </p>
             </div>
           </div>
@@ -233,6 +74,19 @@
     <!-- End footer Area -->
   </div>
 </template>
+
+<style>
+
+.active{
+  color: white;
+  text-decoration: underline !important;
+}
+
+footer{
+  color:white!important;
+
+}
+</style>
 
 <script>
 export default {
