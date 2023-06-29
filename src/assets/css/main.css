@@ -2066,13 +2066,13 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 767px) {
   .protfolio-wrap {
-    margin: 30px;
+    margin: 30px!important;
   }
 }
 
 @media (max-width: 575px) {
   .protfolio-wrap {
-    margin: 10px;
+    margin: 10px!important;
   }
 }
 
