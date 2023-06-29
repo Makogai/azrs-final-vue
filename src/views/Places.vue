@@ -14,7 +14,7 @@
     </section>
 
     <div class="locations mt-4 rounded" style="border-radius: 10px!important; overflow: hidden">
-      <l-map :zoom="8" :center="getMapCenter" style="height: 400px">
+      <l-map :zoom="8" :center="getMapCenter" style="height: 400px; z-index:1;">
         <l-tile-layer
             url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
             attribution="&copy; AZRS"

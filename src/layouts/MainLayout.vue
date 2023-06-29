@@ -48,7 +48,7 @@
                 &amp; festivals of India. Have You're Good time exploring Montenegro.
               </p>
               <p class="footer-text">
-                Copyright ©2023 All rights reserved - Makogai
+                Copyright ©2023 All rights reserved - MFN
               </p>
             </div>
           </div>

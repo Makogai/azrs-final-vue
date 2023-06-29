@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const API = axios.create({
-    baseURL: `http://127.0.0.1:8000/api/v1/`, // replace with the base URL of your API
+    baseURL: `https://azrs.projekti.online/api/v1/`, // replace with the base URL of your API
     timeout: 10000, // request timeout, in milliseconds
     headers: { 'Content-Type': 'application/json' },
 });
