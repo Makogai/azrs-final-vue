@@ -49,7 +49,7 @@
 
           <div id="map" v-if="place.lat != '' && place.lng != ''" class="add-review-container">
             <h3 class="mb-4">Location</h3>
-            <l-map :zoom="13" :center="getMapCenter" style="height: 300px">
+            <l-map :zoom="8" :center="getMapCenter" style="height: 300px">
               <l-tile-layer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                   attribution="&copy; AZRS"
