@@ -29,7 +29,7 @@
                 </h3>
               </router-link>
               <p class="post-meta">Posted by
-                <router-link >{{ blog.user.name }}</router-link>
+                <span >{{ blog.user.name }}</span>
                 on {{ blog.created_at }}
               </p>
             </div>

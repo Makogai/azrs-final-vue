@@ -29,26 +29,28 @@
 
         <div class="filters">
           <ul>
-            <li class="active" data-filter="*">All</li>
-            <li data-filter=".corporate">North</li>
-            <li data-filter=".personal">Central</li>
-            <li data-filter=".agency">North-Eastern</li>
-            <li data-filter=".portal">South</li>
+            <li :class="{ 'active': activeFilter === null }" data-filter="*" @click="filterPlaces(null)">All</li>
+            <li :class="{ 'active': activeFilter === 2 }" data-filter=".corporate" @click="filterPlaces(2)">North</li>
+            <li :class="{ 'active': activeFilter === 5 }" data-filter=".personal" @click="filterPlaces(5)">Central</li>
+            <li :class="{ 'active': activeFilter === 3 }" data-filter=".agency" @click="filterPlaces(3)">East</li>
+            <li :class="{ 'active': activeFilter === 4 }" data-filter=".portal" @click="filterPlaces(4)">West</li>
+            <li :class="{ 'active': activeFilter === 1 }" data-filter=".portal" @click="filterPlaces(1)">South</li>
           </ul>
         </div>
 
         <div class="filters-content">
-          <div class="row grid" >
-            <div class="single-portfolio col-sm-4 all corporate" v-for="place in places">
+          <transition-group name="list" tag="div" class="row grid">
+            <div class="single-portfolio col-sm-4 all corporate" v-for="place in filteredPlaces" :key="place.id">
+              <router-link :to="{name: 'place', params: {id: place.id}}">
               <div class="item">
-                <img class="home_places" :src="place.images[0].url" alt="Work 1">
+                <img class="home_places" :src="getImageUrl(place)" alt="Work 1">
                 <div class="p-inner">
-                  <h4><a href="./Pages-inside/GoldenTemple-Info.html">{{place.name}}</a></h4>
-                  <div class="cat">Punjab</div>
+                  <h4>{{place.name}}</h4>
                 </div>
               </div>
+              </router-link>
             </div>
-          </div>
+          </transition-group>
         </div>
 
       </div>
@@ -70,23 +72,41 @@ export default {
   data() {
     return {
       places: null,
+      filteredPlaces: [],
+      activeFilter: null,
     };
   },
 
   mounted() {
     getPlaces().then((res) => {
       this.places = res.data.data;
+      this.filteredPlaces = [...this.places];
     });
-    
-    getPlace(1).then((res) => {
-      console.log(res)
-    }) 
+  },
+  methods: {
+    getImageUrl(place) {
+      return place.images.length > 0 ? place.images[0].url : require('@/assets/img/placeholder.png');
+    },
+    filterPlaces(categoryId) {
+      this.activeFilter = categoryId;
+      if (categoryId) {
+        this.filteredPlaces = this.places.filter(place => place.cetagory_id == categoryId);
+      } else {
+        this.filteredPlaces = [...this.places];
+      }
+    }
   }
 };
 </script>
 
 <style scoped>
-
+.list-enter-active, .list-leave-active {
+  transition: all 0.5s ease;
+}
+.list-enter, .list-leave-to {
+  opacity: 0;
+  transform: translateY(-20px);
+}
 .home_places{
   aspect-ratio: 1/1;
   object-fit: cover;

@@ -19,6 +19,12 @@ const routes = [
       meta:{layout:"AboutLayout"}
   },
   {
+    path: "/contact",
+    name: "contact",
+    component: () =>
+        import("../views/Contact.vue")
+  },
+  {
     path: "/blog",
     name: "blogs",
     component: () =>
@@ -31,7 +37,19 @@ const routes = [
     component: () =>
       import("../views/SingleBlog.vue"),
   },
-    
+  {
+    path: "/places",
+    name: "places",
+    component: () =>
+        import("../views/Places.vue")
+  },
+  {
+    path: "/places/:id",
+    name: "place",
+    component: () =>
+      import("../views/SinglePlace.vue"),
+  },
+
 ];
 
 const router = new VueRouter({
